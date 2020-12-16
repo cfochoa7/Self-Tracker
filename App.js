@@ -1,21 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, TextInput, View, YellowBox } from 'react-native';
 
-export default function App() {
+const Test = () => {
+  const title = "Tracker";
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={{flex:1,flexDirection: 'column'}}>
+      <View style={{width:420, height:80, backgroundColor:'yellow'}} />
+      
+      <Text style={{alignSelf:'flex-start',
+                    bottom:43,
+                    fontFamily: 'monospace',
+                    fontSize:42,
+                    textDecorationLine: 'underline'
+                    }}>
+        Self-Track</Text>
+
+      <View style={{width:420, height:537, backgroundColor:'white'}} />
+
+      <Text style={{alignSelf:'flex-start',
+                    top: -550,
+                    marginLeft: 55,
+                    fontSize:23
+                    }}>
+          Type in your goal to keep track</Text>
+
+      <View style={{width:420, height:85, backgroundColor:'grey'}} />
+
+
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default Test;
